@@ -8,7 +8,7 @@ import (
 )
 
 var rootDir = flag.String("rootDir", ".", "The root directory to start from")
-var dryRun = flag.Bool("dryRun", true, "A dryrun prints out all the file moves instead of actually moving them.")
+var dryRun = flag.Bool("dryRun", true, "A dryrun prints out all the directories to delete instead of actually deleting them")
 
 func deleteEmptyDirs(path string, info os.FileInfo, err error) error {
 	if !info.IsDir() || path == *rootDir {
